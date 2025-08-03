@@ -1,1 +1,2 @@
-# Hi :) This is Arden
+# Hi :) This is Arden's UX Designer Portfolio
+
