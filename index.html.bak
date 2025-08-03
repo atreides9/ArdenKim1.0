@@ -96,32 +96,6 @@
                     <a href="hanacard.html" class="view-project">View Project <span class="arrow">→</span></a>
                 </div>
             </article>
-
-            <!-- Project 4 -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="./insight-dots.png" alt="Insight Dots: Data Visualization Platform">
-                </div>
-                <div class="project-info">
-                    <span class="project-category">#Data Visualization</span>
-                    <h3>Insight Dots</h3>
-                    <p>A data visualization platform that transforms complex datasets into interactive, accessible insights for decision makers.</p>
-                    <a href="insight-dots.html" class="view-project">View Project <span class="arrow">→</span></a>
-                </div>
-            </article>
-
-            <!-- Project 5 -->
-            <article class="project-card">
-                <div class="project-image">
-                    <img src="./job-hunter.png" alt="Job Hunter: Career Management Platform">
-                </div>
-                <div class="project-info">
-                    <span class="project-category">#Career Platform</span>
-                    <h3>Job Hunter</h3>
-                    <p>A comprehensive career management platform that streamlines job searching and application tracking for professionals.</p>
-                    <a href="job-hunter.html" class="view-project">View Project <span class="arrow">→</span></a>
-                </div>
-            </article>
         </div>
     </section>
 
@@ -221,9 +195,9 @@
                     Get in Touch
                 </a>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/arden-kim-12196628b/" class="social-link" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/atreides9" class="social-link" target="_blank">GitHub</a>
-                    <a href="https://www.notion.so/arden-kim" class="social-link" target="_blank">Notion</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Notion</a>
                 </div>
             </div>
         </div>
