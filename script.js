@@ -34,15 +34,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Parallax effect for hero section
+// Parallax effect for hero section (only for main page)
 window.addEventListener('scroll', () => {
+    // Skip parallax effect for dark mode pages
+    if (document.body.classList.contains('dark-mode')) {
+        return;
+    }
+    
     const scroll = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
-    heroContent.style.transform = `translateY(${scroll * 0.3}px)`;
+    if (heroContent) {
+        heroContent.style.transform = `translateY(${scroll * 0.3}px)`;
+    }
 });
 
-// Navigation background opacity
+// Navigation background opacity (only for main page, not dark mode pages)
 window.addEventListener('scroll', () => {
+    // Skip navigation background changes for dark mode pages
+    if (document.body.classList.contains('dark-mode')) {
+        return;
+    }
+    
     const nav = document.querySelector('.nav-container');
     const scrollPosition = window.scrollY;
     
@@ -69,19 +81,5 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.body.classList.add('dark-mode');
         }, 50);
-    }
-    
-    // Update navigation background for dark mode pages on scroll
-    if (document.body.classList.contains('dark-mode')) {
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('.nav-container');
-            const scrollPosition = window.scrollY;
-            
-            if (scrollPosition > 100) {
-                nav.style.background = 'rgba(26, 26, 26, 0.95)';
-            } else {
-                nav.style.background = 'rgba(26, 26, 26, 0.85)';
-            }
-        });
     }
 });
