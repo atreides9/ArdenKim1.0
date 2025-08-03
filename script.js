@@ -57,3 +57,31 @@ document.querySelectorAll('.tool-bar').forEach(bar => {
     const level = bar.getAttribute('data-level');
     bar.style.width = `${level}%`;
 });
+
+// Smooth dark mode transition for project pages
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if this is a project detail page (has dark-mode class)
+    if (document.body.classList.contains('dark-mode')) {
+        // Temporarily remove dark-mode class to start with light theme
+        document.body.classList.remove('dark-mode');
+        
+        // Add dark-mode class after a small delay for smooth transition
+        setTimeout(() => {
+            document.body.classList.add('dark-mode');
+        }, 50);
+    }
+    
+    // Update navigation background for dark mode pages on scroll
+    if (document.body.classList.contains('dark-mode')) {
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav-container');
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > 100) {
+                nav.style.background = 'rgba(26, 26, 26, 0.95)';
+            } else {
+                nav.style.background = 'rgba(26, 26, 26, 0.85)';
+            }
+        });
+    }
+});

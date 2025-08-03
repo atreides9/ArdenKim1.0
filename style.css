@@ -5,6 +5,14 @@
     --accent-color: #FF6B6B;
     --secondary-color: #4ECDC4;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Dark mode variables for project pages */
+    --dark-bg-color: #1a1a1a;
+    --dark-bg-secondary: #2d2d2d;
+    --dark-text-color: #f5f5f5;
+    --dark-text-secondary: #b8b8b8;
+    --dark-accent-color: #FF7B7B;
+    --dark-border-color: #404040;
 }
 
 * {
@@ -493,6 +501,125 @@ footer {
 
 .nav-project:not(.prev) {
     text-align: right;
+}
+
+/* Page Transition Animation */
+body {
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+.nav-container {
+    transition: background 0.6s ease, border-bottom 0.6s ease;
+}
+
+.logo {
+    transition: color 0.6s ease;
+}
+
+.nav-links a {
+    transition: color 0.6s ease;
+}
+
+.back-link {
+    transition: color 0.6s ease;
+}
+
+.project-category {
+    transition: color 0.6s ease;
+}
+
+.project-subtitle {
+    transition: color 0.6s ease;
+}
+
+/* Dark Mode for Project Detail Pages */
+.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+.dark-mode .nav-container {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(64, 64, 64, 0.3);
+}
+
+.dark-mode .logo {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .nav-links a {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .nav-links a::after {
+    background-color: var(--dark-accent-color);
+}
+
+.dark-mode .back-link {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .back-link:hover {
+    color: var(--dark-accent-color);
+}
+
+.dark-mode .project-category {
+    color: var(--dark-accent-color);
+}
+
+.dark-mode .project-subtitle {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .project-specs {
+    border-top: 1px solid var(--dark-border-color);
+    border-bottom: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .spec-item h3 {
+    color: var(--dark-accent-color);
+}
+
+.dark-mode .spec-item p {
+    color: var(--dark-text-color);
+}
+
+.dark-mode .feature-list li::before {
+    color: var(--dark-accent-color);
+}
+
+.dark-mode .project-navigation {
+    border-top: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .nav-project {
+    background: var(--dark-bg-secondary);
+    color: var(--dark-text-color);
+    border: 1px solid var(--dark-border-color);
+}
+
+.dark-mode .nav-project:hover {
+    background: #3a3a3a;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .nav-project span {
+    color: var(--dark-accent-color);
+}
+
+.dark-mode .nav-project h3 {
+    color: var(--dark-text-color);
+}
+
+.dark-mode footer {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .project-image-hero img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--dark-border-color);
 }
 
 
